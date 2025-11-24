@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>马克思主义基本原理宣传网</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 图标 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- 自定义Tailwind配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#D22630', // 主色调：中国红
+            secondary: '#0A3D62', // 辅助色：深蓝
+            neutral: '#F5F5F5', // 中性色：浅灰
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      .section-padding {
+        @apply py-16 md:py-24;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+  <!-- 导航栏 - 固定顶部，滚动时背景变实 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-primary/90 text-white">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 text-xl md:text-2xl font-bold">
+          <i class="fa-solid fa-book-open"></i>
+          <span>马原宣传网</span>
+        </a>
+        <!-- 桌面端导航 -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#hero" class="hover:text-neutral transition-colors">首页</a>
+          <a href="#core" class="hover:text-neutral transition-colors">核心原理</a>
+          <a href="#history" class="hover:text-neutral transition-colors">发展历程</a>
+          <a href="#value" class="hover:text-neutral transition-colors">当代价值</a>
+          <a href="#quotes" class="hover:text-neutral transition-colors">经典名言</a>
+        </div>
+        <!-- 移动端汉堡菜单 -->
+        <button id="menuBtn" class="md:hidden text-white text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- 移动端导航菜单 - 默认隐藏 -->
+    <div id="mobileMenu" class="md:hidden hidden bg-primary/95 px-4 py-4">
+      <div class="flex flex-col gap-4">
+        <a href="#hero" class="hover:text-neutral transition-colors py-2">首页</a>
+        <a href="#core" class="hover:text-neutral transition-colors py-2">核心原理</a>
+        <a href="#history" class="hover:text-neutral transition-colors py-2">发展历程</a>
+        <a href="#value" class="hover:text-neutral transition-colors py-2">当代价值</a>
+        <a href="#quotes" class="hover:text-neutral transition-colors py-2">经典名言</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区 -->
+  <section id="hero" class="pt-28 md:pt-32 pb-16 md:pb-24 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1073/1920/1080');">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="w-full md:w-3/4 lg:w-1/2 bg-black/50 p-8 md:p-12 rounded-lg">
+        <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white text-shadow mb-4">
+          马克思主义基本原理
+        </h1>
+        <p class="text-lg md:text-xl text-white text-shadow mb-8">
+          揭示人类社会发展规律的科学理论，指引人类解放的思想旗帜
+        </p>
+        <a href="#core" class="inline-block bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/80 transition-colors">
+          了解核心原理 <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心原理板块 -->
+  <section id="core" class="section-padding bg-neutral">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">马克思主义三大核心组成部分</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <!-- 核心原理卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 马克思主义哲学 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa-solid fa-brain text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-4 text-secondary">马克思主义哲学</h3>
+          <p class="text-gray-600 text-center">
+            包括辩证唯物主义和历史唯物主义，揭示了自然、社会和人类思维发展的普遍规律，是科学的世界观和方法论。核心是物质决定意识、矛盾是事物发展的根本动力、人民群众是历史的创造者。
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-200">
+            <img src="https://picsum.photos/id/1002/600/400" alt="马克思主义哲学" class="w-full h-40 object-cover rounded-md">
+          </div>
+        </div>
+        <!-- 马克思主义政治经济学 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa-solid fa-sack-dollar text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-4 text-secondary">马克思主义政治经济学</h3>
+          <p class="text-gray-600 text-center">
+            以剩余价值理论为核心，揭示了资本主义生产方式的内在矛盾和运行规律，阐明了资本主义必然灭亡、社会主义必然胜利的历史趋势，分析了商品、货币、资本的本质和运动规律。
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-200">
+            <img src="https://picsum.photos/id/1015/600/400" alt="马克思主义政治经济学" class="w-full h-40 object-cover rounded-md">
+          </div>
+        </div>
+        <!-- 科学社会主义 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <i class="fa-solid fa-people-group text-3xl text-primary"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-4 text-secondary">科学社会主义</h3>
+          <p class="text-gray-600 text-center">
+            阐明了无产阶级解放斗争的性质、条件和一般目的，指出无产阶级必须通过革命推翻资本主义制度，建立无产阶级专政，最终实现共产主义社会，实现人的自由而全面的发展。
+          </p>
+          <div class="mt-6 pt-4 border-t border-gray-200">
+            <img src="https://picsum.photos/id/1039/600/400" alt="科学社会主义" class="w-full h-40 object-cover rounded-md">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 发展历程板块 -->
+  <section id="history" class="section-padding bg-white">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">马克思主义发展历程</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <!-- 时间轴 -->
+      <div class="relative">
+        <!-- 时间轴中心线 -->
+        <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-primary/20 transform -translate-x-1/2"></div>
+        <!-- 时间轴节点 -->
+        <div class="space-y-12">
+          <!-- 节点1：创立阶段 -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+              <h3 class="text-xl font-bold text-primary mb-2">1848年 · 《共产党宣言》发表</h3>
+              <p class="text-gray-600">马克思、恩格斯合著的《共产党宣言》标志着马克思主义的正式诞生，成为无产阶级革命的纲领性文件，确立了马克思主义的基本原理和立场。</p>
+            </div>
+            <div class="absolute left-1/2 w-8 h-8 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center text-white">
+              <i class="fa-solid fa-flag"></i>
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+              <img src="https://picsum.photos/id/1040/600/400" alt="共产党宣言" class="w-full h-40 object-cover rounded-lg shadow-md">
+            </div>
+          </div>
+          <!-- 节点2：发展阶段 -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+              <img src="https://picsum.photos/id/1047/600/400" alt="列宁主义" class="w-full h-40 object-cover rounded-lg shadow-md">
+            </div>
+            <div class="absolute left-1/2 w-8 h-8 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center text-white">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="md:w-1/2 md:pl-12 md:text-left mb-6 md:mb-0 order-1 md:order-2">
+              <h3 class="text-xl font-bold text-primary mb-2">20世纪初 · 列宁主义诞生</h3>
+              <p class="text-gray-600">列宁结合俄国实际，发展了马克思主义，提出了帝国主义理论和无产阶级革命的新策略，领导十月革命取得胜利，建立了世界上第一个社会主义国家。</p>
+            </div>
+          </div>
+          <!-- 节点3：中国化阶段 -->
+          <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+              <h3 class="text-xl font-bold text-primary mb-2">近代以来 · 马克思主义中国化</h3>
+              <p class="text-gray-600">马克思主义与中国具体实际相结合，先后形成了毛泽东思想、中国特色社会主义理论体系、习近平新时代中国特色社会主义思想，指引中国革命、建设和改革取得伟大胜利。</p>
+            </div>
+            <div class="absolute left-1/2 w-8 h-8 bg-primary rounded-full transform -translate-x-1/2 flex items-center justify-center text-white">
+              <i class="fa-solid fa-dragon"></i>
+            </div>
+            <div class="md:w-1/2 md:pl-12">
+              <img src="https://picsum.photos/id/1054/600/400" alt="马克思主义中国化" class="w-full h-40 object-cover rounded-lg shadow-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 当代价值板块 -->
+  <section id="value" class="section-padding bg-secondary text-white">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">马克思主义的当代价值</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <!-- 当代价值内容 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-lightbulb text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">科学的世界观指导</h3>
+                <p class="text-white/80">马克思主义的辩证唯物主义和历史唯物主义为我们认识世界、改造世界提供了科学的方法，帮助我们正确分析当代社会的各种矛盾和问题。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">破解全球发展难题</h3>
+                <p class="text-white/80">马克思主义关于人类社会发展规律的理论，为解决贫富差距、生态危机、国际冲突等全球性问题提供了重要的思想启示。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">中国发展的行动指南</h3>
+                <p class="text-white/80">马克思主义中国化的最新成果是中国特色社会主义事业的指导思想，指引中国在新时代实现中华民族伟大复兴的中国梦。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">人类解放的精神旗帜</h3>
+                <p class="text-white/80">马克思主义追求人的自由而全面的发展，为人类实现社会公平正义、构建人类命运共同体提供了价值追求和方向指引。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://picsum.photos/id/1069/800/600" alt="马克思主义当代价值" class="w-full h-auto rounded-lg shadow-2xl">
+          <div class="absolute -bottom-6 -left-6 bg-primary/90 p-4 rounded-lg shadow-lg max-w-xs">
+            <p class="italic text-sm">“马克思的思想理论源于那个时代又超越了那个时代，既是那个时代精神的精华又是整个人类精神的精华。”</p>
+            <p class="font-bold mt-2 text-right">——习近平</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 经典名言板块 -->
+  <section id="quotes" class="section-padding bg-neutral">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">马克思经典名言</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      <!-- 名言卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-lg shadow-lg p-8 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-6 left-6"></i>
+          <p class="text-lg text-gray-700 italic mb-4 pl-4">
+            科学绝不是一种自私自利的享乐。有幸能够致力于科学研究的人，首先应该拿自己的学识为人类服务。
+          </p>
+          <p class="text-right font-bold text-secondary">——卡尔·马克思</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-6 left-6"></i>
+          <p class="text-lg text-gray-700 italic mb-4 pl-4">
+            人的本质不是单个人所固有的抽象物，在其现实性上，它是一切社会关系的总和。
+          </p>
+          <p class="text-right font-bold text-secondary">——卡尔·马克思</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-6 left-6"></i>
+          <p class="text-lg text-gray-700 italic mb-4 pl-4">
+            哲学家们只是用不同的方式解释世界，而问题在于改变世界。
+          </p>
+          <p class="text-right font-bold text-secondary">——卡尔·马克思《关于费尔巴哈的提纲》</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8 relative">
+          <i class="fa-solid fa-quote-left text-4xl text-primary/20 absolute top-6 left-6"></i>
+          <p class="text-lg text-gray-700 italic mb-4 pl-4">
+            无产者在这个革命中失去的只是锁链。他们获得的将是整个世界。全世界无产者，联合起来！
+          </p>
+          <p class="text-right font-bold text-secondary">——卡尔·马克思《共产党宣言》</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+          <h3 class="text-xl font-bold mb-2">马克思主义基本原理宣传网</h3>
+          <p class="text-white/70">传播马克思主义真理，传承红色基因</p>
+        </div>
+        <div class="flex gap-6 text-xl">
+          <a href="#" class="hover:text-neutral transition-colors"><i class="fa-solid fa-globe"></i></a>
+          <a href="#" class="hover:text-neutral transition-colors"><i class="fa-solid fa-book"></i></a>
+          <a href="#" class="hover:text-neutral transition-colors"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/70">
+        <p>© 2025 曲鹏飞版权所有</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hidden transition-all z-50 hover:bg-primary/80">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript 交互 -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-primary');
+        navbar.classList.remove('bg-primary/90');
+        backToTop.classList.remove('hidden');
+      } else {
+        navbar.classList.remove('bg-primary');
+        navbar.classList.add('bg-primary/90');
+        backToTop.classList.add('hidden');
+      }
+    });
+
+    // 移动端菜单切换
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuBtn.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      }
+    });
+
+    // 回到顶部功能
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          // 移动端菜单关闭
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
